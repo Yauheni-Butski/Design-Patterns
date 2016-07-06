@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 
 using Design_Patterns.Model;
-using Design_Patterns.Observer_Pattern.CustomObserver.Observer.Interface;
-using Design_Patterns.Observer_Pattern.CustomObserver.Subject;
-using Design_Patterns.Observer_Pattern.CustomObserver.Subject.Interface;
+using Design_Patterns.Observer_Pattern.EventObserver.EventArgs;
+using Design_Patterns.Observer_Pattern.EventObserver.Observer.Interface;
+using Design_Patterns.Observer_Pattern.EventObserver.Subject;
 
-namespace Design_Patterns.Observer_Pattern.CustomObserver.Observer
+namespace Design_Patterns.Observer_Pattern.EventObserver.Observer
 {
-    public class ShortCommentedNewsWidget : INewsWidgetObserver, IWidget
+    public class ShortCommentedNewsEventWidget : IWidget
     {
         private News _shortCommentedNews;
         private List<Comment> _newsComments;
 
-        public ShortCommentedNewsWidget()
+        public ShortCommentedNewsEventWidget()
         {
             _newsComments = new List<Comment>();
         }
 
-        public void Update(INewsSubject observable, News news)
+        public void Update(object sender, NewsEventArgs e)
         {
-            _shortCommentedNews = news;
+            _shortCommentedNews = e.News;
 
-            var subject = observable as NewsSubject;
+            var subject = sender as NewsEventSubject;
             if (subject != null)
             {
-                _newsComments = subject.GetNewsComments(news.Id);
+                _newsComments = subject.GetNewsComments(e.News.Id);
             }
 
             //Just for demo solution we call Display from Update function.
@@ -34,11 +34,11 @@ namespace Design_Patterns.Observer_Pattern.CustomObserver.Observer
 
         public void Display()
         {
-            var formattedNews = string.Format("ShortCommentedNewsWidget: \n Header: {0}", _shortCommentedNews.Header);
+            string formattedNews = string.Format("ShortCommentedNewsWidget: \n Header: {0}", _shortCommentedNews.Header);
             Console.WriteLine(formattedNews);
 
             Console.WriteLine("\t\t Comments:");
-            if (_newsComments.Count == 0)
+            if (_newsComments == null || _newsComments.Count == 0)
             {
                 Console.WriteLine("\t\t No comments for this news");
                 return;

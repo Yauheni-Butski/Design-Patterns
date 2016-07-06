@@ -46,6 +46,7 @@
     <Compile Include="Data Repository\CommentRepository.cs" />
     <Compile Include="Observer Pattern\CustomObserver\Observer\FullNewsWidget.cs" />
     <Compile Include="Observer Pattern\CustomObserver\Observer\Interface\INewsWidgetObserver.cs" />
+    <Compile Include="Observer Pattern\CustomObserver\Observer\Interface\IWidget.cs" />
     <Compile Include="Observer Pattern\CustomObserver\Observer\ShortCommentedNewsWidget.cs" />
     <Compile Include="Observer Pattern\CustomObserver\Observer\ShortNewsWidget.cs" />
     <Compile Include="Observer Pattern\CustomObserver\Subject\Interface\INewsSubject.cs" />
@@ -53,15 +54,19 @@
     <Compile Include="Data Repository\NewsRepository.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\News.cs" />
+    <Compile Include="Observer Pattern\EventObserver\EventArgs\NewsEventArgs.cs" />
+    <Compile Include="Observer Pattern\EventObserver\Observer\FullNewsEventWidget.cs" />
+    <Compile Include="Observer Pattern\EventObserver\Observer\Interface\IWidget.cs" />
+    <Compile Include="Observer Pattern\EventObserver\Observer\ShortCommentedNewsEventWidget.cs" />
+    <Compile Include="Observer Pattern\EventObserver\Observer\ShortNewsEventWidget.cs" />
+    <Compile Include="Observer Pattern\EventObserver\Subject\NewsEventSubject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Observer Pattern\EventObserver\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
