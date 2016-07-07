@@ -6,6 +6,8 @@ C# .NET solution with examples of design patterns. Based on book "Head first Des
   1.1. Custom Observer
   
   1.2. Event observer
+  
+2. Strategy
 
 ---------------------------------------------
 # 1. Observer
@@ -28,3 +30,8 @@ Also, current example illustrates *"Pull"* and *"Push"* NewsSubject working mode
 
 In Custom Observer example implementation was made without using delegates and events.
 
+**1.2 Event Observer**
+
+In Event Observer example implementation was made with delegate and events functionality in .NET.
+
+# 2. Strategy
