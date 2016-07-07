@@ -1,18 +1,18 @@
 ﻿using System;
 
 using Design_Patterns.Model;
-using Design_Patterns.Observer_Pattern.CustomObserver.Observer.Interface;
-using Design_Patterns.Observer_Pattern.CustomObserver.Subject.Interface;
+using Design_Patterns.Observer_Pattern.EventObserver.EventArgs;
+using Design_Patterns.Observer_Pattern.EventObserver.Observer.Interface;
 
-namespace Design_Patterns.Observer_Pattern.CustomObserver.Observer
+namespace Design_Patterns.Observer_Pattern.EventObserver.Observer
 {
-    public class FullNewsWidget : INewsWidgetObserver, IWidget
+    public class FullNewsEventWidget : IWidget
     {
         private News _fullNews;
 
-        public void Update(INewsSubject observable, News news)
+        public void Update(object sender, NewsEventArgs e)
         {
-            _fullNews = news;
+            _fullNews = e.News;
 
             //Just for demo solution we call Display from Update function.
             Display();
