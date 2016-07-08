@@ -35,3 +35,8 @@ In Custom Observer example implementation was made without using delegates and e
 In Event Observer example implementation was made with delegate and events functionality in .NET.
 
 # 2. Strategy
+
+In this example we have different types of pokemons. Base abstract class *Pokemon.cs* have common parameters for all other pokemon types. Each type of pokemons, like *WaterPokemon.cs*, *FirePokemon.cs*, *ElectricPokemon.cs*, have different behaviour for *Attack()* and *Evolution()*.
+But in Pokemon World we have many types of battles. And, for example in some case is better to choose big *WaterPokemon.cs*, but in some case small. For some battles it is better to choose only young and male pokemon. 
+So, for any kind of pokemns we can have different rules for accept decision "Is this pokemon good for current battle or not?"
+Pattern Strategy help to us change validation rules for any type of pokemons.
