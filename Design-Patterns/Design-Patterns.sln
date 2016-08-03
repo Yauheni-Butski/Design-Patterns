@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{02A063ED-D9A8-481A-A913-B29A51540842}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{D2614119-2700-4ABB-8752-5EAEA43F7A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{69E3D26B-2B21-4ED7-B9A2-242FA3270514}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{02A063ED-D9A8-481A-A913-B29A51540842}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02A063ED-D9A8-481A-A913-B29A51540842}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02A063ED-D9A8-481A-A913-B29A51540842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2614119-2700-4ABB-8752-5EAEA43F7A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2614119-2700-4ABB-8752-5EAEA43F7A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2614119-2700-4ABB-8752-5EAEA43F7A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2614119-2700-4ABB-8752-5EAEA43F7A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E3D26B-2B21-4ED7-B9A2-242FA3270514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E3D26B-2B21-4ED7-B9A2-242FA3270514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E3D26B-2B21-4ED7-B9A2-242FA3270514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E3D26B-2B21-4ED7-B9A2-242FA3270514}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
