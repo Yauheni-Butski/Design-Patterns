@@ -18,7 +18,7 @@ namespace FactoryMethod
 
             ViewManager notepadViewManager = new NotepadPlusPlusViewManager();
             notepadViewManager.Open("notes.txt");
-            notepadViewManager.Open("styles.cs");
+            notepadViewManager.Open("styles.css");
             notepadViewManager.Open("index.html");
             Console.WriteLine("--------");
 

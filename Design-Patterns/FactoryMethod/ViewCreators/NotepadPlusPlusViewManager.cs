@@ -16,6 +16,7 @@ namespace FactoryMethod.ViewCreators
             {
                 "txt",
                 "cs",
+                "css",
                 "xml",
                 "html"
             };
