@@ -11,6 +11,8 @@ C# .NET solution with examples of design patterns. Based on book "Head first Des
 
 3. Decorator
 
+4. Factory Method 
+
 ---------------------------------------------
 # 1. Observer
 Implement example of source of news (NewsSubject). NewsSubject can publish news. Every news can have a users' comments.
@@ -55,3 +57,31 @@ Also, **HtmlElements.cs** doesn't know anything about styles. So, we have differ
 During getting render string of html element, each decorator will add by chain his style into render string. So, in our system we still work with **HtmlElement.cs** object but now we have styles in render string.
 
 P.S. Each decorator can have his own logic for adding style into render string, but now in my example all decorators have similar logic, so I moved this functionality into base class **StyleDecorator.cs**
+
+# 4. Factory Method
+
+In this example we would like to open many types of files in needed viewer/program. For example we have files: *‘file.doc’, ‘player.docx’, ‘table.xls’, ‘changes.patch’, ‘notes.txt’, ‘styles.css’* and etc. Some files should be open in needed viewer (for example *‘player.doc’* can be opened in Word 2003), some files we can open in different viewer (for example *’styles.css’* we can open in Notepad++ or in Visual Studio). 
+
+Clients work through class **ViewManager.cs**, so they know that **ViewManager.cs** can open necessary file through method **Open(string fileName)** and that they just need to send filename as parameter.
+
+**ViewManager.cs** is *abstract class*. He have 2 methods:
+
+* void Open(string fileName)
+
+* abstract IViewer GetViewer(string fileName)
+
+**GetViewer** is our **Factory Method**. **ViewManager.cs** doesn't know what type of file should be opened in what viewers. And he delegate this responsibilities to his successors. So, **ViewManager.cs** doesn’t know how exactly will be created needed viewer and what viewer will be created. He just know that **GetViewer** will return something that implement *interface* **IViewer** and that it can be *Open()*.
+
+**ViewManager.cs** calls **GetViewer(string fileName)** from **Open(string fileName)** method.
+
+Successors of **ViewManager.cs** can resolve what type of file should be opened in what viewers. In current example we have 3 successors (**Concreate ViewManagers**):
+
+* MSOfficeViewManager.cs
+
+* NotepadPlusPlusViewManager.cs
+
+* VisualStudioViewManager.cs
+
+For example, **MSOfficeViewManager.cs** know about all file extensions that supported by MS Office products. And he can resolve that file *‘file.doc’* should be opened in program MS Word 2007, file *‘player.docx’* should be opened in program MS Word 2010 and file *‘table.xls’* should be opened in MS Excel. 
+
+Also, we can open, for example *’style.css’*, in Visual Studio and in Notepad++ by changing concreate view manager in runtime.
