@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using AbstractFactory.Factory;
+using AbstractFactory.Factory.Interface;
+using AbstractFactory.Weapon;
 
 namespace AbstractFactory
 {
@@ -10,6 +10,15 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
+            IWeaponAccessoryFactory teamRedFactory = new TeamRedWeaponAccessoryFactory();
+            Weapon.Base.Weapon teamRedWeapon = new BigFuckingGunWeapon("Team Red BFG Weapon", teamRedFactory);
+            teamRedWeapon.Print();
+            Console.WriteLine("====================");
+
+            IWeaponAccessoryFactory teamYellowFactory = new TeamYellowWeaponAccessoryFactory();
+            Weapon.Base.Weapon teamYellowWeapon = new BigFuckingGunWeapon("Team Yellow BFG Weapon", teamYellowFactory);
+            teamYellowWeapon.Print();
+            Console.WriteLine("====================");
         }
     }
 }

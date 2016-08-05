@@ -43,12 +43,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\Interface\IWeaponAccessoryFactory.cs" />
+    <Compile Include="Factory\TeamRedWeaponAccessoryFactory.cs" />
+    <Compile Include="Factory\TeamYellowWeaponAccessoryFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeaponAccessories\Ammo\BananaAmmo.cs" />
+    <Compile Include="WeaponAccessories\Ammo\PlasmaAmmo.cs" />
+    <Compile Include="WeaponAccessories\Barrel\ShipCannonBarrel.cs" />
+    <Compile Include="WeaponAccessories\Barrel\ShortThinMetalBarrel.cs" />
+    <Compile Include="WeaponAccessories\Bayonet\LongSwordBayonet.cs" />
+    <Compile Include="WeaponAccessories\Butt\ShortGoldenButt.cs" />
+    <Compile Include="WeaponAccessories\Butt\ShortWoodenButt.cs" />
+    <Compile Include="WeaponAccessories\Interface\IAmmo.cs" />
+    <Compile Include="WeaponAccessories\Interface\IBarrel.cs" />
+    <Compile Include="WeaponAccessories\Interface\IBayonet.cs" />
+    <Compile Include="WeaponAccessories\Interface\IButt.cs" />
+    <Compile Include="WeaponAccessories\Interface\IScope.cs" />
+    <Compile Include="WeaponAccessories\Interface\ISilencer.cs" />
+    <Compile Include="WeaponAccessories\Interface\IStock.cs" />
+    <Compile Include="WeaponAccessories\Interface\IUnderBarrel.cs" />
+    <Compile Include="WeaponAccessories\Interface\IWeaponAccessory.cs" />
+    <Compile Include="WeaponAccessories\Scope\LaserScope.cs" />
+    <Compile Include="WeaponAccessories\Scope\OpticalScope.cs" />
+    <Compile Include="WeaponAccessories\Silencer\LongSpySilencer.cs" />
+    <Compile Include="WeaponAccessories\Stock\MammothTuskStock.cs" />
+    <Compile Include="WeaponAccessories\Stock\WoodenStock.cs" />
+    <Compile Include="WeaponAccessories\UnderBarrel\ChainsawUnderBarrel.cs" />
+    <Compile Include="WeaponAccessories\UnderBarrel\FlamethrowerUnderBarrel.cs" />
+    <Compile Include="Weapon\Base\Weapon.cs" />
+    <Compile Include="Weapon\BigFuckingGunWeapon.cs" />
+    <Compile Include="Weapon\Interface\IWeapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
