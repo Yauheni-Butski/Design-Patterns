@@ -41,6 +41,6 @@ namespace Strategy.Context
         }
 
         public abstract void Attack();
-        public abstract void Evolution();
+        public abstract void Evolve();
     }
 }

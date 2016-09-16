@@ -16,9 +16,9 @@ namespace Strategy.Context
             Console.WriteLine(message);
         }
 
-        public override void Evolution()
+        public override void Evolve()
         {
-            var message = string.Format("{0} is evolving to next water type.", this.Name);
+            var message = string.Format("{0} is evolving into next water type.", this.Name);
             Console.WriteLine(message);
         }
     }

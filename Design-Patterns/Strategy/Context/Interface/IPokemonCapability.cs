@@ -3,6 +3,6 @@
     public interface IPokemonCapability
     {
         void Attack();
-        void Evolution();
+        void Evolve();
     }
 }
