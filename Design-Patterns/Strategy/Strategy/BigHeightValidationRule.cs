@@ -1,4 +1,5 @@
 ﻿using System;
+
 using Strategy.Context;
 using Strategy.Strategy.Interface;
 
