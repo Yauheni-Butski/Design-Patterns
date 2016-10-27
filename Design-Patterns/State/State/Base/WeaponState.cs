@@ -13,9 +13,7 @@ namespace State.State.Base
         }
 
         public abstract void Shot();
-
         public abstract void Reload();
-
         public abstract void Cool();
     }
 }
