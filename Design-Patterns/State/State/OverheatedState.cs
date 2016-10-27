@@ -32,8 +32,6 @@ namespace State.State
 
         public override void Cool()
         {
-            Weapon.CurrentState = Weapon.OverheatedState;
-
             //Change state only after 10 seconds were passed
             SetTimer(10000);
         }
