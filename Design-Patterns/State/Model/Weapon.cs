@@ -27,11 +27,6 @@ namespace State.Model
             CurrentState = LoadedState;
         }
 
-        public void SetState(IWeaponState state)
-        {
-            CurrentState = state;
-        }
-
         public void Shot()
         {
             CurrentState.Shot();
