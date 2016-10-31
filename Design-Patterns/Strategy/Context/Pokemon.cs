@@ -30,7 +30,7 @@ namespace Strategy.Context
             _combatSutiabilityRule = new AliveValidationRule();
         }
 
-        public void SetCombatSutiabilityValidationRule(ICombatSuitabilityValidationRule rule)
+        public void SetCombatSuitabilityValidationRule(ICombatSuitabilityValidationRule rule)
         {
             _combatSutiabilityRule = rule;
         }
